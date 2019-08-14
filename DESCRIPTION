@@ -3,14 +3,14 @@ Package: Synthpop primer
 Title: What the Package Does (One Line, Title Case)
 Version: 0.0.1
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "Daniel",
+           family = "Quintana",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
+           email = "daniel.quintana@medisin.uio.no",
+           comment = c(ORCID = "0000-0003-2876-0004"))
 Description: A primer on using the synthpop package for the
     biobehavioral sciences
-License: What license it uses
+License: Creative Commons Attribution 4.0 International Public License
 Depends: 
     synthpop,
     tidyverse,
