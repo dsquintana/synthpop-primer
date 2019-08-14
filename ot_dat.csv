@@ -1,0 +1,80 @@
+OT_COND,OT_COND_n,Age,Rel_aff,Rel_aff_OTHER,Rel_aff_corrected,rel_aff_cat,rel_aff_cat_n,spi_1_L,spi_1_W1,sts_1,sts_2,sts_3,sts_4,sts_5,sts_6,sts_7,sts_8,sts_9,sts_10,sts_11,sts_12,sts_13,sts_14,sts_15,OT_belief
+Oxytocin,1,43,1,,1,Affiliated,0,,7,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,I really have no idea
+Placebo,0,36,3,,2,Affiliated,0,4,,6,4,5,5,6,5,4,4,4,5,6,5,5,4,5,I really have no idea
+Placebo,0,53,2,Methodist,1,Affiliated,0,5,6,5,5,2,4,6,3,5,3,5,6,6,5,5,4,4,I really have no idea
+Placebo,0,35,2,Baptist,1,Affiliated,0,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,I really have no idea
+Placebo,0,37,2,United Church of Christ,1,Affiliated,0,3,5,6,2,5,6,5,7,7,6,2,6,4,1,6,7,5,I really have no idea
+Placebo,0,35,1,,1,Affiliated,0,2,4,4,5,6,4,4,4,6,4,5,6,4,5,6,5,5,I really have no idea
+Placebo,0,48,2,Methodist,1,Affiliated,0,3,2,6,6,5,4,6,6,6,4,5,5,5,5,6,6,5,I really have no idea
+Oxytocin,1,39,2,Lutheran,1,Affiliated,0,6,6,5,5,6,6,7,7,6,5,5,6,6,5,5,7,5,I really have no idea
+Oxytocin,1,42,2,Presbyterian,1,Affiliated,0,2,3,5,3,4,2,5,7,7,5,2,3,4,4,6,6,4,oxytocin
+Oxytocin,1,52,2,Church of Christ,1,Affiliated,0,7,4,5,5,4,4,6,6,6,4,5,7,7,7,4,7,4,oxytocin
+Placebo,0,43,2,Baptist,1,Affiliated,0,7,7,7,2,7,7,7,7,6,6,2,7,7,7,7,7,7,oxytocin
+Placebo,0,49,1,,1,Affiliated,0,5,6,5,4,6,6,7,4,6,5,6,7,6,6,4,6,6,oxytocin
+Placebo,0,47,2,Presbyterian,1,Affiliated,0,1,1,5,5,7,5,6,7,6,5,6,2,1,1,5,6,7,oxytocin
+Oxytocin,1,40,5,,4,Affiliated,0,1,3,6,2,6,6,3,3,2,2,3,4,4,4,2,6,6,I really have no idea
+Oxytocin,1,36,8,Christian,1,Affiliated,0,6,6,5,5,4,6,5,4,4,5,6,7,6,7,7,4,5,I really have no idea
+Placebo,0,57,2,methodist,1,Affiliated,0,2,2,4,2,3,3,5,5,5,3,5,4,4,4,6,4,4,I really have no idea
+Oxytocin,1,36,2,Mixed,1,Affiliated,0,5,5,6,6,7,6,6,6,6,6,3,5,3,5,6,6,6,placebo
+Oxytocin,1,55,2,Lutheran,1,Affiliated,0,5,5,4,6,4,2,6,2,2,2,3,6,4,5,5,6,2,I really have no idea
+Placebo,0,47,2,Nazarene,1,Affiliated,0,6,6,7,7,7,7,7,5,7,7,4,7,7,7,4,7,4,I really have no idea
+Placebo,0,45,2,methodist,1,Affiliated,0,7,7,5,7,6,6,7,4,4,7,6,7,6,7,6,7,7,I really have no idea
+Placebo,0,50,1,,1,Affiliated,0,7,7,5,3,5,6,7,6,6,6,2,7,5,6,3,7,5,I really have no idea
+Placebo,0,51,2,Non-denominational,1,Affiliated,0,7,7,5,2,4,3,6,6,2,2,2,6,5,6,6,6,2,I really have no idea
+Oxytocin,1,48,2,Unitarian,1,Affiliated,0,5,5,6,7,6,6,7,4,7,6,7,6,4,4,5,7,6,I really have no idea
+Placebo,0,52,2,Baptist (moderate),1,Affiliated,0,6,5,6,5,6,6,7,6,6,5,4,6,7,7,5,6,5,placebo
+Placebo,0,52,1,,1,Affiliated,0,6,6,6,4,6,5,6,6,5,5,3,6,6,6,6,6,6,oxytocin
+Placebo,0,42,2,...loosely speaking...,1,Affiliated,0,4,3,5,6,4,3,7,6,6,5,6,5,2,2,5,5,3,oxytocin
+Placebo,0,40,4,,3,Affiliated,0,5,6,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,I really have no idea
+Oxytocin,1,38,8,Non Practice Catholic,1,Affiliated,0,5,6,7,5,6,7,6,5,4,6,6,6,6,6,5,7,6,placebo
+Oxytocin,1,58,8,Baptist,1,Affiliated,0,7,7,7,5,6,6,7,7,6,6,6,7,6,7,7,6,6,I really have no idea
+Placebo,0,37,4,,3,Affiliated,0,2,3,5,1,7,3,7,5,4,3,1,7,7,3,3,4,5,oxytocin
+Placebo,0,36,2,Lutheran,1,Affiliated,0,5,5,6,7,5,5,5,6,6,4,7,6,6,5,6,5,5,oxytocin
+Placebo,0,46,8,Christian,1,Affiliated,0,5,5,5,5,5,5,5,5,5,5,4,6,7,7,5,7,5,I really have no idea
+Oxytocin,1,56,2,Methodist,1,Affiliated,0,5,7,6,6,6,6,6,5,5,5,5,5,5,5,5,5,5,I really have no idea
+Oxytocin,1,44,2,Methodist,1,Affiliated,0,5,6,5,6,6,5,5,6,6,5,6,6,6,5,5,5,5,I really have no idea
+Oxytocin,1,45,2,Presbyterian,1,Affiliated,0,5,5,6,7,6,5,7,7,7,5,7,7,3,4,5,6,4,placebo
+Oxytocin,1,35,2,United Church of Christ,1,Affiliated,0,5,4,5,3,5,5,5,7,7,3,3,4,5,3,1,7,6,I really have no idea
+Oxytocin,1,41,1,,1,Affiliated,0,7,3,7,6,6,5,6,6,6,6,6,7,6,6,6,7,7,oxytocin
+Placebo,0,39,5,,4,Affiliated,0,4,4,5,5,5,6,5,6,6,5,6,5,5,5,6,6,5,I really have no idea
+Placebo,0,48,8,Unitarian,1,Affiliated,0,1,1,7,2,7,1,7,2,7,6,2,2,1,1,5,1,7,oxytocin
+Placebo,0,37,1,,1,Affiliated,0,4,3,5,3,4,4,6,5,5,4,4,4,4,4,5,5,5,placebo
+Placebo,0,39,1,,1,Affiliated,0,4,5,6,1,6,6,4,3,5,4,1,5,5,3,6,5,2,I really have no idea
+Oxytocin,1,35,2,Presbyterian,1,Affiliated,0,5,4,6,5,5,6,7,5,5,4,5,7,7,7,1,6,5,I really have no idea
+Oxytocin,1,52,8,Non-Denominational,1,Affiliated,0,2,4,5,4,5,6,5,5,4,2,5,5,5,5,5,4,4,I really have no idea
+Oxytocin,1,36,2,non-denominational,1,Affiliated,0,4,6,4,5,7,4,4,6,5,6,2,4,6,4,2,7,7,oxytocin
+Placebo,0,53,2,Lutheran,1,Affiliated,0,6,5,7,6,7,6,7,7,7,7,7,7,6,2,6,6,5,oxytocin
+Oxytocin,1,39,1,,1,Affiliated,0,2,4,6,5,6,6,7,6,6,5,4,6,4,5,4,4,4,I really have no idea
+Oxytocin,1,35,8,Baptist,1,Affiliated,0,7,,7,7,7,7,7,7,7,7,7,6,7,7,6,7,7,I really have no idea
+Placebo,0,40,6,,5,Non-affiliated,1,1,0,5,2,5,3,5,3,5,5,3,6,2,3,3,3,2,placebo
+Placebo,0,37,7,,6,Non-affiliated,1,1,2,3,1,5,4,5,2,5,2,2,5,5,4,5,2,4,placebo
+Placebo,0,57,7,,6,Non-affiliated,1,0,0,1,5,7,1,4,4,4,1,7,1,1,1,1,1,1,I really have no idea
+Oxytocin,1,58,7,,6,Non-affiliated,1,6,5,5,6,7,5,7,6,7,5,6,3,1,1,6,3,3,I really have no idea
+Placebo,0,60,7,,6,Non-affiliated,1,0,0,6,2,5,4,6,6,6,7,5,1,1,1,6,4,4,oxytocin
+Oxytocin,1,43,7,,6,Non-affiliated,1,1,4,5,5,5,4,6,4,6,4,3,6,4,3,3,5,3,I really have no idea
+Placebo,0,48,7,,6,Non-affiliated,1,1,1,6,5,7,2,6,7,7,3,5,2,1,2,5,7,4,placebo
+Placebo,0,62,7,,6,Non-affiliated,1,1,0,7,6,7,2,7,5,7,7,5,2,1,1,6,5,7,I really have no idea
+Oxytocin,1,44,6,,5,Non-affiliated,1,1,1,4,1,5,5,5,5,7,5,3,4,1,5,5,5,5,I really have no idea
+Oxytocin,1,61,6,,5,Non-affiliated,1,6,5,6,7,7,6,7,5,7,5,7,6,4,6,6,7,7,I really have no idea
+Oxytocin,1,39,6,,5,Non-affiliated,1,3,4,4,7,4,4,7,3,4,4,7,3,5,4,3,5,4,placebo
+Oxytocin,1,56,6,,5,Non-affiliated,1,0,0,6,6,5,4,6,5,3,4,6,4,1,1,4,1,4,placebo
+Oxytocin,1,37,7,,6,Non-affiliated,1,0,0,3,1,4,1,6,2,6,2,1,1,1,1,4,2,2,I really have no idea
+Oxytocin,1,56,6,,5,Non-affiliated,1,5,1,7,6,5,5,6,6,7,4,6,5,4,4,6,6,6,I really have no idea
+Placebo,0,60,7,,6,Non-affiliated,1,0,0,6,1,4,1,7,6,6,6,2,1,1,4,7,7,4,I really have no idea
+Oxytocin,1,38,6,,5,Non-affiliated,1,1,4,6,2,7,4,5,4,6,5,2,3,3,4,5,6,4,oxytocin
+Oxytocin,1,37,6,,5,Non-affiliated,1,2,1,5,3,7,5,6,4,5,5,2,6,5,4,5,5,5,I really have no idea
+Oxytocin,1,36,7,,6,Non-affiliated,1,0,0,4,5,7,7,7,7,7,7,7,4,1,1,1,7,7,I really have no idea
+Oxytocin,1,47,6,,5,Non-affiliated,1,5,5,5,5,5,5,6,5,5,4,5,6,4,5,5,4,4,placebo
+Oxytocin,1,53,6,,5,Non-affiliated,1,3,2,7,5,7,7,6,6,6,7,5,7,4,5,7,7,7,placebo
+Placebo,0,41,6,,5,Non-affiliated,1,1,1,4,7,5,3,5,3,5,4,2,3,1,2,3,3,3,I really have no idea
+Placebo,0,44,7,,6,Non-affiliated,1,1,0,1,5,7,1,1,5,5,1,5,1,4,1,2,1,7,I really have no idea
+Placebo,0,61,7,,6,Non-affiliated,1,0,0,5,4,4,1,7,6,7,5,6,1,1,1,5,1,1,I really have no idea
+Placebo,0,36,7,,6,Non-affiliated,1,0,0,7,5,5,2,7,5,2,3,5,1,1,1,3,6,1,I really have no idea
+Oxytocin,1,37,6,,5,Non-affiliated,1,5,4,6,3,5,5,5,6,6,6,1,4,4,3,6,6,4,I really have no idea
+Oxytocin,1,50,7,,6,Non-affiliated,1,4,6,7,7,7,6,6,7,6,6,7,3,2,1,6,6,7,placebo
+Oxytocin,1,49,8,I'm open to it.,5,Non-affiliated,1,6,6,7,7,7,7,7,7,7,7,7,7,7,7,5,7,7,oxytocin
+Oxytocin,1,37,6,,5,Non-affiliated,1,2,2,5,5,4,5,5,4,6,4,5,4,4,4,5,5,4,I really have no idea
+Placebo,0,39,7,,6,Non-affiliated,1,2,3,5,5,7,4,5,5,6,5,7,5,3,5,3,7,5,I really have no idea
+Placebo,0,37,6,,5,Non-affiliated,1,2,1,3,6,6,5,6,6,4,3,3,2,5,2,3,7,3,oxytocin
+Placebo,0,49,6,,5,Non-affiliated,1,3,2,6,3,6,6,6,5,5,5,5,5,5,5,5,5,6,I really have no idea
+Oxytocin,1,38,7,,6,Non-affiliated,1,0,0,4,2,4,2,4,4,5,3,1,2,1,1,4,5,3,oxytocin

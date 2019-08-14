@@ -1,0 +1,23 @@
+Type: Compendium
+Package: Synthpop primer
+Title: What the Package Does (One Line, Title Case)
+Version: 0.0.1
+Authors@R: 
+    person(given = "First",
+           family = "Last",
+           role = c("aut", "cre"),
+           email = "first.last@example.com",
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: A primer on using the synthpop package for the
+    biobehavioral sciences
+License: What license it uses
+Depends: 
+    dataRetrieval,
+    dplyr,
+    ggplot2,
+    holepunch,
+    lubridate,
+    tidyr,
+    viridis
+Encoding: UTF-8
+LazyData: true
