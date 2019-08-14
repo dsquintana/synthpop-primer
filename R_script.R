@@ -21,7 +21,7 @@ ipak <- function(pkg) {
   sapply(pkg, require, character.only = TRUE)
 }
 
-packages <- c("synthpop", "tidyverse", "cowplot", "car", "ggstatsplot")
+packages <- c("synthpop", "tidyverse", "cowplot", "car")
 ipak(packages)
 
 
@@ -70,64 +70,9 @@ fig_1a
 
 #####
 
-## Supplementary Figure 1 ##
+## Supplementary Figures ##
 
-ot_dat2 <-
-  as.data.frame(ot_dat) # Create new dataframe for multicompare
-
-s_fig_1 <- multi.compare(ot_sim, ot_dat2,
-                          var = "OT_condition", by = "spirituality")
-
-s_fig_1 <- s_fig_1 +
-  labs(fill = "Nasal spray \n condition") + # Renames legend
-  labs(y = "Counts") + # Relabels y-axis 
-  theme_minimal_hgrid(12) # Applies a theme from the 'cowplot' package
-
-s_fig_1
-
-## Supplementary Figure 2 ##
-
-s_fig_2 <- multi.compare(ot_sim, ot_dat2,
-                          var = "OT_condition", 
-                          by = "rel_affiliation",
-                          cont.type = "box")
-
-s_fig_2 <- s_fig_2 +
-  labs(fill = "Nasal spray \n condition") + # Renames legend
-  labs(y = "Count") + # Relabels y-axis 
-  scale_y_continuous(expand = c(0, 0)) + # Forces y-axis to start at zero
-  theme_minimal_hgrid(12) # Applies a theme from the 'cowplot' package
-
-s_fig_2
-
-## Supplementary Figure 3 ##
-
-# Create new merged dataset to create figure
-
-dat_m <- read_csv("ot_dat.csv") 
-ot_sim_m <- syn(dat_m, seed = 1337)
-ot_sim_df <- ot_sim_m$syn
-dat_m_df  <- cbind(data = "observed", dat_m)
-ot_sim_dff <- cbind(data = "synthetic", ot_sim_df)
-merge_dat <- bind_rows(dat_m_df, ot_sim_dff)
-
-s_fig_3 <- ggstatsplot::grouped_ggscatterstats(
-  data = merge_dat,
-  x = spi_1_L,
-  y = Age,
-  conf.level = 0.95,
-  k = 2, # no. of decimal places in the results
-  xlab = "Spirituality",
-  bf.message = FALSE,
-  grouping.var = data, # grouping variable
-  title.prefix = "Dataset",
-  marginal.type = "density",
-  ggtheme = ggplot2::theme_minimal(),
-  messages = FALSE,
-  nrow = 2,
-  title.text = ""
-)
-s_fig_3
+# See OSF code, removed due to loading constraints
 
 #######
 
