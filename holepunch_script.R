@@ -1,6 +1,6 @@
 # Holepunch script
 
-# library(holepunch) To install, remove hashtag and run command
+
 
 write_compendium_description(package = "Synthpop primer", 
                              description = "A primer on using the synthpop package for the biobehavioral sciences")
