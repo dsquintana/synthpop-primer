@@ -12,12 +12,10 @@ Description: A primer on using the synthpop package for the
     biobehavioral sciences
 License: What license it uses
 Depends: 
-    dataRetrieval,
-    dplyr,
-    ggplot2,
-    holepunch,
-    lubridate,
-    tidyr,
-    viridis
+    synthpop,
+    tidyverse,
+    cowplot,
+    car,
+    ggstatsplot
 Encoding: UTF-8
 LazyData: true
