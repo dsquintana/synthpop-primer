@@ -1,0 +1,84 @@
+R version 3.6.1 (2019-07-05)
+Platform: x86_64-apple-darwin15.6.0 (64-bit)
+Running under: macOS Mojave 10.14
+
+Matrix products: default
+BLAS:   /System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBLAS.dylib
+LAPACK: /Library/Frameworks/R.framework/Versions/3.6/Resources/lib/libRlapack.dylib
+
+locale:
+[1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+ [1] ggstatsplot_0.0.12    car_3.0-3             carData_3.0-2        
+ [4] cowplot_1.0.0         forcats_0.4.0         stringr_1.4.0        
+ [7] dplyr_0.8.3           purrr_0.3.2           readr_1.3.1          
+[10] tidyr_0.8.3           tibble_2.1.3          tidyverse_1.2.1      
+[13] synthpop_1.5-1        ggplot2_3.2.0         nnet_7.3-12          
+[16] MASS_7.3-51.4         lattice_0.20-38       holepunch_0.1.19.9000
+
+loaded via a namespace (and not attached):
+  [1] estimability_1.3       SparseM_1.77           coda_0.19-3           
+  [4] multcomp_1.4-10        data.table_1.12.2      rpart_4.1-15          
+  [7] inline_0.3.15          generics_0.0.2         callr_3.3.1           
+ [10] TH.data_1.0-10         usethis_1.5.1          polspline_1.1.15      
+ [13] future_1.14.0          xml2_1.2.2             lubridate_1.7.4       
+ [16] httpuv_1.5.1           StanHeaders_2.18.1-10  assertthat_0.2.1      
+ [19] WRS2_1.0-0             hms_0.5.0              promises_1.0.1        
+ [22] DEoptimR_1.0-8         fansi_0.4.0            progress_1.2.2        
+ [25] readxl_1.3.1           Rsolnp_1.16            mcmc_0.9-6            
+ [28] reshape_0.8.8          stats4_3.6.1           paletteer_0.2.1       
+ [31] ellipsis_0.2.0.1       selectr_0.4-1          rcompanion_2.2.2      
+ [34] backports_1.1.4        insight_0.4.1          ggcorrplot_0.1.3      
+ [37] MCMCpack_1.4-4         libcoin_1.0-4          jmvcore_1.0.0         
+ [40] cliapp_0.1.0           vctrs_0.2.0            quantreg_5.51         
+ [43] sjlabelled_1.1.0       abind_1.4-5            withr_2.1.2           
+ [46] packrat_0.5.0          metaBMA_0.6.1          robustbase_0.93-5     
+ [49] emmeans_1.4            prettyunits_1.0.2      mnormt_1.5-5          
+ [52] cluster_2.1.0          lazyeval_0.2.2         crayon_1.3.4          
+ [55] pkgconfig_2.0.2        labeling_0.3           nlme_3.1-140          
+ [58] rlang_0.4.0            globals_0.12.4         miniUI_0.1.1.1        
+ [61] groupedstats_0.0.8     skimr_1.0.7            LaplacesDemon_16.1.1  
+ [64] MatrixModels_0.4-1     sandwich_2.5-1         EMT_1.1               
+ [67] modelr_0.1.5           cellranger_1.1.0       randomForest_4.6-14   
+ [70] rprojroot_1.3-2        matrixStats_0.54.0     broomExtra_0.0.4      
+ [73] lmtest_0.9-37          Matrix_1.2-17          loo_2.1.0             
+ [76] mc2d_0.1-18            boot_1.3-22            zoo_1.8-6             
+ [79] processx_3.4.1         rjson_0.2.20           clisymbols_1.2.0      
+ [82] ini_0.3.1              KernSmooth_2.23-15     ggExtra_0.8           
+ [85] classInt_0.4-1         multcompView_0.1-7     coin_1.3-0            
+ [88] robust_0.4-18.1        ggsignif_0.6.0         scales_1.0.0          
+ [91] magrittr_1.5           plyr_1.8.4             compiler_3.6.1        
+ [94] rstantools_1.5.1       lme4_1.1-21            rrcov_1.4-7           
+ [97] cli_1.1.0              listenv_0.7.0          pbapply_1.4-1         
+[100] ps_1.3.0               TMB_1.7.15             Brobdingnag_1.2-6     
+[103] mgcv_1.8-28            tidyselect_0.2.5       stringi_1.4.3         
+[106] ggrepel_0.8.1          bridgesampling_0.7-2   grid_3.6.1            
+[109] purrrlyr_0.0.5         manipulate_1.0.1       tools_3.6.1           
+[112] mipfp_3.2.1            parallel_3.6.1         rio_0.5.16            
+[115] rstudioapi_0.10        cmm_0.12               foreign_0.8-71        
+[118] git2r_0.26.1           gridExtra_2.3          digest_0.6.20         
+[121] shiny_1.3.2            party_1.3-3            proto_1.0.0           
+[124] nortest_1.0-4          jmv_0.9.6.1            Rcpp_1.0.2            
+[127] broom_0.5.2            metafor_2.1-0          ez_4.4-0              
+[130] BayesFactor_0.9.12-4.2 performance_0.3.0      later_0.8.0           
+[133] httr_1.4.1             psych_1.8.12           sjstats_0.17.5        
+[136] colorspace_1.4-1       rvest_0.3.4            fs_1.3.1              
+[139] truncnorm_1.0-8        splines_3.6.1          expm_0.999-4          
+[142] gh_1.0.1               renv_0.6.0-103         fit.models_0.5-14     
+[145] xtable_1.8-4           jsonlite_1.6           nloptr_1.2.1          
+[148] strucchange_1.5-1      rstan_2.19.2           zeallot_0.1.0         
+[151] modeltools_0.2-22      R6_2.4.0               broom.mixed_0.2.4     
+[154] pillar_1.4.2           htmltools_0.3.6        mime_0.7              
+[157] glue_1.3.1             minqa_1.2.4            class_7.3-15          
+[160] codetools_0.2-16       pkgbuild_1.0.4         pcaPP_1.9-73          
+[163] mvtnorm_1.0-11         furrr_0.1.0            numDeriv_2016.8-1.1   
+[166] curl_4.0               DescTools_0.99.28      gtools_3.8.1          
+[169] logspline_2.1.13       clipr_0.7.0            zip_2.0.3             
+[172] openxlsx_4.1.0.1       survival_2.44-1.1      desc_1.2.0            
+[175] munsell_0.5.0          e1071_1.7-2            rsample_0.0.5         
+[178] sjmisc_2.8.1           haven_2.1.1            reshape2_1.4.3        
+[181] gtable_0.3.0           bayestestR_0.2.5      
