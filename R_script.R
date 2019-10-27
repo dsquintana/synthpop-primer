@@ -287,9 +287,17 @@ fig1 <- plot_grid(p1_top, p1_bottom,
 
 fig1 # Print at 14 x 6 inches for same dimensions as manuscript
 
+
+### Prepare data for sharing
+
+ot_synthetic_label <- sdc(ot_sim, ot_dat, 
+                          label = "FAKE_DATA") # Adds a "FAKE_DATA" label
+
+ot_synthetic_dat <- ot_synthetic_label$syn # Extracts the synthetic data to a dataframe for sharing
+
 ######
 
-### Manuscript example 1: Oxytocin concentrations and theory of mind performance
+### Manuscript example 2: Oxytocin concentrations and theory of mind performance
 
 # Original data source: https://data.mendeley.com/datasets/h3f6ywpd5t/1
 
@@ -387,4 +395,184 @@ fig2 <- plot_grid(
 
 fig2 # Print at 14 x 5 inches for same dimensions as manuscript
 
+### Prepare data for sharing
 
+ot_blood_label <- sdc(b_dat_s, b_dat, 
+                      label = "FAKE_DATA") # Adds a "FAKE_DATA" label
+
+ot_blood_synthetic_dat <- ot_blood_label$syn # Extracts the synthetic data to a dataframe for sharing
+
+### Manuscript example 3: Sociosexuality and self-rated attractiveness
+
+# Original data source: https://osf.io/6bk3w/
+
+socio_dat <- read_csv("socio.csv") # Import data
+
+socio_dat <- socio_dat %>% drop_na() # Drop NAs
+
+socio_dat <-  socio_dat %>% filter(sex %in% c("male", "female", "intersex")) 
+
+socio_dat_s <- syn(socio_dat, seed = 122) # Create synthetic dataset
+
+fig_3a <- compare(
+  socio_dat_s,
+  socio_dat,
+  breaks = 12,
+  ncol = 7,
+  nrow = 2,
+  cols = c("#62B6CB", "#1B4965")
+) # Compare datasets
+
+fig_3a <- fig_3a$plots # Extract plots from "Fig_2a" object
+
+fig_3a <- fig_3a +
+  scale_y_continuous(expand = c(0, 0)) + # Force y-axis to start at zero
+  theme_minimal_hgrid(12) # Apply theme
+
+fig_3a <- fig_3a +
+  theme(axis.text.x = element_text(angle = 60, hjust = 1),
+        axis.title.x = element_blank()) +
+  labs(fill = "Dataset")
+
+fig_3a
+
+
+
+# Models
+
+socio_lm <- lm(behavior2 ~ 1 +
+                 sra + age + lab,
+               data = socio_dat) # linear model
+
+socio_dat_sum <- summary(socio_lm) # Result from linear model
+socio_dat_sum
+
+socio_lm_syn <- lm.synds(behavior2 ~ 1 + sra + age + lab,
+                         data = socio_dat_s) # Equivalent linear model in synthetic data
+
+
+socio_lm_syn_s <- summary(socio_lm_syn) # Results from linear model in synthetic data
+socio_lm_syn_s
+
+fig_3b <- compare(
+  socio_lm_syn,
+  socio_dat,
+  breaks = 12,
+  ncol = 7,
+  nrow = 2,
+  cols = c("#62B6CB", "#1B4965")
+) # Compare datasets
+
+
+fig_3b
+
+fig_3b <-  fig_3b$ci.plot # Extract plot from the "fig_3b" object
+
+fig_3b <- fig_3b + ggtitle("") +
+  theme(axis.text.y = element_blank())  # Remove title and y-axis text
+
+fig_3b <- fig_3b + theme_half_open() +
+  background_grid() # Add theme
+
+fig_3b <- fig_3b +
+  theme(axis.text.y = element_blank()) +
+  scale_x_discrete(breaks = NULL, name = "Coefficient") # Remove x-axis text
+
+fig_3b <- fig_3b +
+  annotate("text",
+           x = 3,
+           y = 13.8,
+           label = "SRA") +
+  annotate("text",
+           x = 2,
+           y = 27.5,
+           label = "Age") +
+  annotate("text",
+           x = 1,
+           y = 1.1,
+           label = "Location")
+fig_3b
+
+# Detect replicated individuals and prepare synthetic dataset for sharing
+
+dim(socio_dat_s$syn) # Rows and columns before removal of replicated uniques
+
+socio_dat_s_sdc <- sdc(socio_dat_s, socio_dat, 
+                       label = "FAKE_DATA", 
+                       rm.replicated.uniques = TRUE) # Remove replicated uniques and add FAKE label
+
+dim(socio_dat_s_sdc$syn) # Rows and columns AFTER removal of replicated uniques
+
+socio_synthetic_dat <- socio_dat_s_sdc$syn # Extracts the synthetic data (replicated uniques removed) to a dataframe for sharing
+
+# Regression model with uniques excluded
+
+socio_lm_syn_ue <- lm.synds(behavior2 ~ 1 + sra + age + lab,
+                            data = socio_dat_s_sdc) # Equivalent linear model in synthetic data
+
+socio_lm_syn_ue_s <- summary(socio_lm_syn_ue) # Results from linear model in synthetic data
+socio_lm_syn_ue_s
+
+
+fig_3c <- compare(
+  socio_lm_syn_ue,
+  socio_dat,
+  breaks = 12,
+  ncol = 7,
+  nrow = 2,
+  cols = c("#62B6CB", "#1B4965")
+) # Compare datasets
+
+fig_3c
+
+fig_3c <-  fig_3c$ci.plot # Extract plot from the "fig_3b" object
+
+fig_3c <- fig_3c + ggtitle("") +
+  theme(axis.text.y = element_blank())  # Remove title and y-axis text
+
+fig_3c <- fig_3c + theme_half_open() +
+  background_grid() # Add theme
+
+fig_3c <- fig_3c +
+  theme(axis.text.y = element_blank()) +
+  scale_x_discrete(breaks = NULL, name = "Coefficient") # Remove x-axis text
+
+fig_3c <- fig_3c +
+  annotate("text",
+           x = 3,
+           y = 13.8,
+           label = "SRA") +
+  annotate("text",
+           x = 2,
+           y = 27.5,
+           label = "Age") +
+  annotate("text",
+           x = 1,
+           y = 1.1,
+           label = "Location")
+fig_3c
+
+# Create figure 3 plot
+# First create regression model panels
+
+fig3bc <- plot_grid(
+  fig_3b,
+  NULL,
+  fig_3c,
+  labels = c('B', '', 'C'),
+  ncol = 1,
+  rel_heights = c(1, 0.01, 1.)
+) 
+
+fig3bc
+
+fig3 <- plot_grid(
+  fig_3a,
+  NULL,
+  fig3bc,
+  labels = c('A', '', ''),
+  ncol = 3,
+  rel_widths = c(5, 0.15, 1.5)
+) # Combine plots (some space was added in between the plots)
+
+fig3
