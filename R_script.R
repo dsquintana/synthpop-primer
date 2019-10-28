@@ -70,7 +70,8 @@ fig_1a
 
 ## Supplementary Figures 
 
-# See R script on the project's OSF page. This section of the analysis was removed due to loading constraints
+# To generate figures, see full R script on the project's OSF page https://osf.io/z524n/ 
+# This section of the analysis was removed from the Rstudio server instance due to loading constraints
 
 #####
 
@@ -551,7 +552,7 @@ fig_3c <- fig_3c +
            label = "Location")
 fig_3c
 
-## Create figure 3 plot
+# Create figure 3 plot
 # First create regression model panels
 
 fig3bc <- plot_grid(
