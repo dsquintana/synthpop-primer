@@ -5,8 +5,6 @@
 # University of Oslo
 # Email: daniel.quintana@medisin.uio.no
 
-# Required datasets to reproduce these results can be downloaded at: https://osf.io/z524n/
-
 # Load required packages
 
 # This is a function that will check to see if packages are installed.
@@ -27,7 +25,7 @@ ipak(packages)
 
 ################################
 
-### Manuscript example 1: Oxytocin and sprituality
+## Manuscript example 1: Oxytocin and sprituality
 
 ot_dat <- read_csv("ot_dat.csv") # Loads data
 
@@ -38,7 +36,7 @@ ot_dat <- ot_dat %>%
     spirituality = spi_1_L
   )  # Renames the variables for easier figure interpretation
 
-## Figure 1a ##
+## Figure 1a 
 
 ot_sim <- syn(ot_dat, seed = 1337) # Creates synthetic data
 
@@ -70,19 +68,18 @@ fig_1a
 
 #####
 
-## Supplementary Figures ##
+## Supplementary Figures 
 
-# See OSF code, removed due to loading constraints
+# See R script on the project's OSF page. This section of the analysis was removed due to loading constraints
 
-#######
+#####
 
-## Check for replicated unique units ##
+## Check for replicated unique units 
 
 ru <- replicated.uniques(ot_sim, ot_dat)
-
 ru
 
-#######
+#####
 
 ## t-test
 
@@ -135,6 +132,8 @@ fig_1b <- fig_1b +
            label = "Nasal spray condition")
 fig_1b
 
+#####
+
 ## Correlation
 
 a_cor = cor.test(ot_dat$Age, ot_dat$spirituality,
@@ -184,8 +183,9 @@ fig_1c <- fig_1c +
            label = "Spirituality") # Add label to plot
 fig_1c
 
-#### Ancova
+#####
 
+## Ancova
 
 anc = car::Anova(aov(spirituality ~ OT_condition + rel_affiliation, 
                      data = ot_dat))
@@ -205,7 +205,6 @@ null_rel = lm(spirituality ~ 1 +
 
 result_rel = anova(null_rel, anc_lm) # Comparison of null and full model
 result_rel # Comparison of null and full model, yielding the same F statistic and p-value
-
 
 s_ancova <-
   lm.synds(spirituality ~ 1 + OT_condition + rel_affiliation,
@@ -249,13 +248,14 @@ fig_1d <- fig_1d +
            label = "Religious affiliation") # Add labels
 fig_1d
 
-# Construct figure 1
+#####
+
+## Construct figure 1
 
 p1_top <- plot_grid(fig_1a,
                     labels = c('A'),
                     ncol = 1,
                     label_size = 12) # Create top panel
-
 
 p1_bottom <- plot_grid(
   fig_1b + theme(legend.position = "none"),
@@ -287,19 +287,18 @@ fig1 <- plot_grid(p1_top, p1_bottom,
 
 fig1 # Print at 14 x 6 inches for same dimensions as manuscript
 
-
-### Prepare data for sharing
+## Prepare data for sharing
 
 ot_synthetic_label <- sdc(ot_sim, ot_dat, 
                           label = "FAKE_DATA") # Adds a "FAKE_DATA" label
 
 ot_synthetic_dat <- ot_synthetic_label$syn # Extracts the synthetic data to a dataframe for sharing
 
-######
+##### 
 
 ### Manuscript example 2: Oxytocin concentrations and theory of mind performance
 
-# Original data source: https://data.mendeley.com/datasets/h3f6ywpd5t/1
+## Original data source: https://data.mendeley.com/datasets/h3f6ywpd5t/1
 
 b_dat <- read_csv("blood.csv") # Import data
 
@@ -329,13 +328,14 @@ fig_2a <- fig_2a +
   labs(fill = "Dataset")
 
 #####
-# Check for replicated unique values
+
+## Check for replicated unique values
 
 ru_b <- replicated.uniques(b_dat_s, b_dat)
 ru_b
 ####
 
-# RMET
+## RMET
 
 rmet_m <- lm(RMET ~ 1 +
                OT + Sex,
@@ -382,7 +382,7 @@ fig_2b <- fig_2b +
            y = -0.35,
            label = "Sex") # Add labels
 
-# Plot grid
+## Plot grid
 
 fig2 <- plot_grid(
   fig_2a,
@@ -395,16 +395,18 @@ fig2 <- plot_grid(
 
 fig2 # Print at 14 x 5 inches for same dimensions as manuscript
 
-### Prepare data for sharing
+## Prepare data for sharing
 
 ot_blood_label <- sdc(b_dat_s, b_dat, 
                       label = "FAKE_DATA") # Adds a "FAKE_DATA" label
 
 ot_blood_synthetic_dat <- ot_blood_label$syn # Extracts the synthetic data to a dataframe for sharing
 
-### Manuscript example 3: Sociosexuality and self-rated attractiveness
+#####
 
-# Original data source: https://osf.io/6bk3w/
+## Manuscript example 3: Sociosexuality and self-rated attractiveness
+
+## Original data source: https://osf.io/6bk3w/
 
 socio_dat <- read_csv("socio.csv") # Import data
 
@@ -436,8 +438,6 @@ fig_3a <- fig_3a +
 
 fig_3a
 
-
-
 # Models
 
 socio_lm <- lm(behavior2 ~ 1 +
@@ -462,7 +462,6 @@ fig_3b <- compare(
   nrow = 2,
   cols = c("#62B6CB", "#1B4965")
 ) # Compare datasets
-
 
 fig_3b
 
@@ -493,7 +492,7 @@ fig_3b <- fig_3b +
            label = "Location")
 fig_3b
 
-# Detect replicated individuals and prepare synthetic dataset for sharing
+## Detect replicated individuals and prepare synthetic dataset for sharing
 
 dim(socio_dat_s$syn) # Rows and columns before removal of replicated uniques
 
@@ -552,7 +551,7 @@ fig_3c <- fig_3c +
            label = "Location")
 fig_3c
 
-# Create figure 3 plot
+## Create figure 3 plot
 # First create regression model panels
 
 fig3bc <- plot_grid(
