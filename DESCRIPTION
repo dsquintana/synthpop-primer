@@ -1,7 +1,7 @@
 Type: Compendium
 Package: Synthpop primer
-Title: What the Package Does (One Line, Title Case)
-Version: 0.0.1
+Title: A primer on using the synthpop package
+Version: 0.0.2
 Authors@R: 
     person(given = "Daniel",
            family = "Quintana",
@@ -15,6 +15,9 @@ Depends:
     synthpop,
     tidyverse,
     cowplot,
-    car
+    car,
+    simstudy,
+    patchwork,
+    mice
 Encoding: UTF-8
 LazyData: true
