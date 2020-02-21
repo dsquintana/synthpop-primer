@@ -13,6 +13,7 @@ To launch a RStudio server instance and run my analysis scripts online, click [h
   [![Launch Rstudio Binder](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/dsquintana/synthpop-primer/master?urlpath=rstudio)
   <!-- badges: end -->
 
+Once the Rstudio server instance has loaded, run the commands in the "R_script.R" file.
 
 #### Run analysis locally
 To run the analysis locally in RStudio, download this repository as a zipped file. The R version and package versions are noted in the `sessionInfo.txt` file.
