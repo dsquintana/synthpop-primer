@@ -12,9 +12,6 @@
 # This is a known intermittent error with Rstudio https://github.com/tidyverse/ggplot2/issues/2252
 # If this occurs, confirm you are using the most recent Rstudio version
 # Alternatively, simply try re-running the analysis, as it will work again on a 2nd or 3rd attempt
-install.packages("devtools")
-devtools::install_github("debruine/faux", build_vignettes = FALSE) # Installs the faux package, which is not on CRAN
-# The faux package is used to simulate corellated variables
 
 # Load required packages
 
@@ -31,9 +28,35 @@ ipak <- function(pkg) {
 }
 
 packages <- c("synthpop", "tidyverse", "cowplot", "car",
-              "simstudy", "patchwork", "faux", "mice")
+              "simstudy", "patchwork", "mice")
 ipak(packages)
 
+# The following is a function from the "faux" package https://debruine.github.io/faux/index.html
+# This had to be function had to be entered manually, as faux is not yet available on CRAN
+# This function simulates correlated variables
+# This function was pasted from version 0.0.0.9018
+
+rnorm_pre <- function (x, mu = 0, sd = 1, r = 0, empirical = FALSE) 
+{
+  if (!is.vector(x)) 
+    stop("x must be a vector")
+  if (!is.numeric(x)) 
+    stop("x must be numeric")
+  if (length(x) < 3) 
+    stop("x must have length > 2")
+  n <- length(x)
+  if (!empirical) {
+    sample_params <- sample_from_pop(n, mu, sd, r)
+    mu <- sample_params$mu
+    sd <- sample_params$sd
+    r <- sample_params$r
+  }
+  y <- stats::rnorm(n)
+  z <- r * scale(x)[, 1] + sqrt(1 - r^2) * scale(stats::resid(stats::lm(y ~ 
+                                                                          x)))[, 1]
+  yresult <- mu + sd * z
+  return(yresult)
+}
 
 ################################
 
