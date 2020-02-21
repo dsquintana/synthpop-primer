@@ -28,7 +28,7 @@ ipak <- function(pkg) {
 }
 
 packages <- c("synthpop", "tidyverse", "cowplot", "car",
-              "simstudy", "patchwork", "mice")
+              "simstudy", "mice")
 ipak(packages)
 
 # The following is a function from the "faux" package https://debruine.github.io/faux/index.html
