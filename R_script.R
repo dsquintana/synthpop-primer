@@ -2136,7 +2136,7 @@ C2_comp
 
 fig_c2 <- C2_comp$ci.plot
 
-fig_c2 <- fig_c1 + ggtitle("")
+fig_c2 <- fig_c2 + ggtitle("")
 
 fig_c2 <- fig_c2 + labs(x = "", y = "")
 
