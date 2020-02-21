@@ -11,7 +11,7 @@
 # "Error in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : polygon edge not found"
 # This is a known intermittent error with Rstudio https://github.com/tidyverse/ggplot2/issues/2252
 # If this occurs, confirm you are using the most recent Rstudio version
-# Alternatively, simply try re-running the analysis, as it will work again on a 2nd or 3rd attempt
+# Alternatively, simply try re-running the analysis, as it should work again on a 2nd or 3rd attempt
 
 # Load required packages
 
@@ -1247,19 +1247,25 @@ fig_a9 <- fig_a9 + ggtitle("High skew and 20% missing data") +
         plot.title = element_text(size = 8, face = "bold"))
 fig_a9
 
-figure_S4 <-  fig_S1a + fig_S2a + fig_S3a + fig_S4a +
-  fig_S5a + fig_S6a + fig_S7a + fig_S8a + fig_S9a +
-  plot_layout(nrow = 9) # Create a plot grid visualising general utility
+figure_S4 <- plot_grid(
+  fig_S1a, fig_S2a, fig_S3a, fig_S4a,
+    fig_S5a, fig_S6a, fig_S7a, fig_S8a, fig_S9a,
+  nrow = 9
+) # Create a plot grid visualising general utility
+
 
 # To save the plot at a readable size, remove the "uncomment" (i.e., remove the leading #) in the next line
 # ggsave("figure_S4.pdf", width = 20, height = 22, units = "in")
 
-figure_S7 <-  (fig_a1 | fig_a2 | fig_a3) /
-  (fig_a4 | fig_a5 |fig_a6) /
-  (fig_a7 | fig_a8 | fig_a9) # Create a plot grid visualising specific utility
+figure_S7 <- plot_grid(
+  fig_a1, fig_a2, fig_a3, 
+  fig_a4, fig_a5, fig_a6, 
+  fig_a7, fig_a8, fig_a9,
+  nrow = 3
+)
 
 # To save the plot at a readable size, remove the "uncomment" (i.e., remove the leading #) in the next line
-# ggsave("figureS3.pdf", width = 20, height = 22, units = "in")
+# ggsave("figureS3.pdf", width = 7, height = 4.5, units = "in")
 
 #### B1 #####
 
@@ -1961,16 +1967,22 @@ fig_b9 <- fig_b9 + ggtitle("High skew and 20% missing data") +
         plot.title = element_text(size = 8, face = "bold"))
 fig_b9
 
-figure_S5 <-  fig_S1b + fig_S2b + fig_S3b + fig_S4b +
-  fig_S5b + fig_S6b + fig_S7b + fig_S8b + fig_S9b +
-  plot_layout(nrow = 9)
+figure_S5 <- plot_grid(
+  fig_S1b, fig_S2b, fig_S3b, fig_S4b,
+  fig_S5b, fig_S6b, fig_S7b, fig_S8b, fig_S9b,
+  nrow = 9
+) # Create a plot grid visualising general utility
 
 # To save the plot at a readable size, remove the "uncomment" (i.e., remove the leading #) in the next line
 # ggsave("figure_S5.pdf", width = 20, height = 22, units = "in")
 
-figure_3 <-  (fig_b1 | fig_b2 | fig_b3) /
-  (fig_b4 | fig_b5 |fig_b6) /
-  (fig_b7 | fig_b8 | fig_b9)
+
+figure_3 <- plot_grid(
+  fig_b1, fig_b2, fig_b3, 
+  fig_b4, fig_b5, fig_b6, 
+  fig_b7, fig_b8, fig_b9,
+  nrow = 3
+)
 
 # To save the plot at a readable size, remove the "uncomment" (i.e., remove the leading #) in the next line
 # ggsave("figure_3.pdf", width = 7, height = 4.5, units = "in")
@@ -2672,16 +2684,22 @@ fig_c9 <- fig_c9 + ggtitle("High skew and 5% missing data") +
         plot.title = element_text(size = 8, face = "bold"))
 fig_c9
 
-figure_S6 <-  fig_S1b + fig_S2c + fig_S3c + fig_S4c +
-  fig_S5c + fig_S6c + fig_S7c + fig_S8c + fig_S9c +
-  plot_layout(nrow = 9)
+figure_S6 <- plot_grid(
+  fig_S1c, fig_S2c, fig_S3c, fig_S4c,
+  fig_S5c, fig_S6c, fig_S7c, fig_S8c, fig_S9c,
+  nrow = 9
+) # Create a plot grid visualising general utility
 
 # To save the plot at a readable size, remove the "uncomment" (i.e., remove the leading #) in the next line
 # ggsave("figure_S6.pdf", width = 20, height = 22, units = "in")
 
-figure_S8 <-  (fig_b1 | fig_b2 | fig_b3) /
-  (fig_b4 | fig_b5 |fig_b6) /
-  (fig_b7 | fig_b8 | fig_b9)
+
+figure_S8 <- plot_grid(
+  fig_c1, fig_c2, fig_c3, 
+  fig_c4, fig_c5, fig_c6, 
+  fig_c7, fig_c8, fig_c9,
+  nrow = 3
+)
 
 # To save the plot at a readable size, remove the "uncomment" (i.e., remove the leading #) in the next line
 # ggsave("figure_S8.pdf", width = 7, height = 4.5, units = "in")
