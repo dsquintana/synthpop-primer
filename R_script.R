@@ -28,7 +28,7 @@ ipak <- function(pkg) {
 }
 
 packages <- c("synthpop", "tidyverse", "cowplot", "car",
-              "simstudy", "mice")
+              "simstudy", "mice", "StatMeasures")
 ipak(packages)
 
 # The following is a function from the "faux" package https://debruine.github.io/faux/index.html
@@ -562,6 +562,10 @@ knitr::kable(A1_dat) # A summary table of the variables
 
 A1_dat <- genData(40, A1_dat) # Generates the dataset with 40 cases
 
+outliers(A1_dat$hrv)  
+
+# All values greater than 75th percentile value + 1.5 times the IQR or lesser than 25th percentile value - 1.5 times the IQR, are tagged as outliers.
+
 A1_dat$fitness <- rnorm_pre(A1_dat$hrv, 
                             mu = 22, sd = 1, r = 0.3, 
                             empirical = TRUE) # Transforms the fitness data so that it's correlated with HRV (r = .3)
@@ -648,6 +652,8 @@ set.seed(1337)
 A2_dat <- ampute(A1_dat, prop = 0.05, bycases = FALSE)
 A2_dat <-A2_dat$amp
 
+outliers(A2_dat$hrv)
+
 A2_dat_sim <- syn(A2_dat, seed = 1337) # Creates synthetic data
 
 A2_com <- compare(
@@ -722,6 +728,8 @@ fig_a2
 set.seed(1337)
 A3_dat <- ampute(A1_dat, prop = 0.20, bycases = FALSE)
 A3_dat <-A3_dat$amp
+
+outliers(A3_dat$hrv)
 
 A3_dat_sim <- syn(A3_dat, seed = 1337) # Creates synthetic data
 
@@ -805,6 +813,8 @@ knitr::kable(A4_dat)
 
 A4_dat <- genData(40, A4_dat)
 
+outliers(A4_dat$hrv)
+
 A4_dat$fitness <- rnorm_pre(A4_dat$hrv, 
                             mu = 22, sd = 1, r = 0.3, empirical = TRUE)
 
@@ -884,6 +894,8 @@ set.seed(1337)
 A5_dat <- ampute(A4_dat, prop = 0.05, bycases = FALSE)
 A5_dat <- A5_dat$amp
 
+outliers(A5_dat$hrv)
+
 A5_dat_sim <- syn(A5_dat, seed = 1337) # Creates synthetic data
 
 A5_com <- compare(
@@ -953,6 +965,8 @@ fig_a5
 set.seed(1337)
 A6_dat <- ampute(A4_dat, prop = 0.20, bycases = FALSE)
 A6_dat <-A6_dat$amp
+
+outliers(A6_dat$hrv)
 
 A6_dat_sim <- syn(A6_dat, seed = 1337) # Creates synthetic data
 
@@ -1036,6 +1050,8 @@ knitr::kable(A4_dat)
 
 A7_dat <- genData(40, A7_dat)
 
+outliers(A7_dat$hrv)
+
 A7_dat$fitness <- rnorm_pre(A7_dat$hrv, 
                             mu = 22, sd = 1, r = 0.3, empirical = TRUE)
 
@@ -1114,6 +1130,8 @@ set.seed(1337)
 A8_dat <- ampute(A7_dat, prop = 0.05, bycases = FALSE)
 A8_dat <- A8_dat$amp
 
+outliers(A8_dat$hrv)
+
 A8_dat_sim <- syn(A8_dat, seed = 1337) # Creates synthetic data
 
 A8_com <- compare(
@@ -1182,6 +1200,8 @@ fig_a8
 set.seed(1337)
 A9_dat <- ampute(A7_dat, prop = 0.2, bycases = FALSE)
 A9_dat <- A9_dat$amp
+
+outliers(A9_dat$hrv)
 
 A9_dat_sim <- syn(A9_dat, seed = 1337) # Creates synthetic data
 
@@ -1287,6 +1307,8 @@ knitr::kable(B1_dat)
 
 B1_dat <- genData(100, B1_dat)
 
+outliers(B1_dat$hrv)
+
 B1_dat$fitness <- rnorm_pre(B1_dat$hrv, 
                             mu = 22, sd = 1, r = 0.3, empirical = TRUE)
 
@@ -1369,6 +1391,8 @@ set.seed(1337)
 B2_dat <- ampute(B1_dat, prop = 0.05, bycases = FALSE)
 B2_dat <-B2_dat$amp
 
+outliers(B2_dat$hrv)
+
 B2_dat_sim <- syn(B2_dat, seed = 1337) # Creates synthetic data
 
 B2_com <- compare(
@@ -1441,6 +1465,8 @@ fig_b2
 set.seed(1337)
 B3_dat <- ampute(B1_dat, prop = 0.20, bycases = FALSE)
 B3_dat <-B3_dat$amp
+
+outliers(B3_dat$hrv)
 
 B3_dat_sim <- syn(B3_dat, seed = 1337) # Creates synthetic data
 
@@ -1525,6 +1551,8 @@ knitr::kable(B4_dat)
 
 B4_dat <- genData(100, B4_dat)
 
+outliers(B4_dat$hrv)
+
 B4_dat$fitness <- rnorm_pre(B4_dat$hrv, 
                             mu = 22, sd = 1, r = 0.3, empirical = TRUE)
 
@@ -1603,6 +1631,8 @@ set.seed(1337)
 B5_dat <- ampute(B4_dat, prop = 0.05, bycases = FALSE)
 B5_dat <- B5_dat$amp
 
+outliers(B5_dat$hrv)
+
 B5_dat_sim <- syn(B5_dat, seed = 1337) # Creates synthetic data
 
 B5_com <- compare(
@@ -1672,6 +1702,8 @@ fig_b5
 set.seed(1337)
 B6_dat <- ampute(B4_dat, prop = 0.20, bycases = FALSE)
 B6_dat <-B6_dat$amp
+
+outliers(B6_dat$hrv)
 
 B6_dat_sim <- syn(B6_dat, seed = 1337) # Creates synthetic data
 
@@ -1755,6 +1787,8 @@ knitr::kable(B7_dat)
 
 B7_dat <- genData(100, B7_dat)
 
+outliers(B7_dat$hrv)
+
 B7_dat$fitness <- rnorm_pre(B7_dat$hrv, 
                             mu = 22, sd = 1, r = 0.3, empirical = TRUE)
 
@@ -1833,6 +1867,8 @@ set.seed(1337)
 B8_dat <- ampute(B7_dat, prop = 0.05, bycases = FALSE)
 B8_dat <- B8_dat$amp
 
+outliers(B8_dat$hrv)
+
 B8_dat_sim <- syn(B8_dat, seed = 1337) # Creates synthetic data
 
 B8_com <- compare(
@@ -1902,6 +1938,8 @@ fig_b8
 set.seed(1337)
 B9_dat <- ampute(B7_dat, prop = 0.2, bycases = FALSE)
 B9_dat <- B9_dat$amp
+
+outliers(B9_dat$hrv)
 
 B9_dat_sim <- syn(B9_dat, seed = 1337) # Creates synthetic data
 
@@ -2008,6 +2046,8 @@ knitr::kable(C1_dat)
 
 C1_dat <- genData(10000, C1_dat)
 
+outliers(C1_dat$hrv)
+
 C1_dat$fitness <- rnorm_pre(C1_dat$hrv, 
                             mu = 22, sd = 1, r = 0.3, empirical = TRUE)
 
@@ -2088,6 +2128,8 @@ set.seed(1337)
 C2_dat <- ampute(C1_dat, prop = 0.05, bycases = FALSE)
 C2_dat <-C2_dat$amp
 
+outliers(C2_dat$hrv)
+
 C2_dat_sim <- syn(C2_dat, seed = 1337) # Creates synthetic data
 
 C2_com <- compare(
@@ -2158,6 +2200,8 @@ fig_c2
 set.seed(1337)
 C3_dat <- ampute(C1_dat, prop = 0.20, bycases = FALSE)
 C3_dat <- C3_dat$amp
+
+outliers(C3_dat$hrv)
 
 C3_dat_sim <- syn(C3_dat, seed = 1337) # Creates synthetic data
 
@@ -2241,6 +2285,7 @@ knitr::kable(C4_dat)
 
 C4_dat <- genData(10000, C4_dat)
 
+outliers(C4_dat$hrv)
 
 C4_dat$fitness <- rnorm_pre(C4_dat$hrv, 
                             mu = 22, sd = 1, r = 0.3, empirical = TRUE)
@@ -2320,6 +2365,8 @@ set.seed(1337)
 C5_dat <- ampute(C4_dat, prop = 0.05, bycases = FALSE)
 C5_dat <- C5_dat$amp
 
+outliers(C5_dat$hrv)
+
 C5_dat_sim <- syn(C5_dat, seed = 1337) # Creates synthetic data
 
 C5_com <- compare(
@@ -2389,6 +2436,8 @@ fig_c5
 set.seed(1337)
 C6_dat <- ampute(C4_dat, prop = 0.20, bycases = FALSE)
 C6_dat <-C6_dat$amp
+
+outliers(C6_dat$hrv)
 
 C6_dat_sim <- syn(C6_dat, seed = 1337) # Creates synthetic data
 
@@ -2472,6 +2521,8 @@ knitr::kable(C7_dat)
 
 C7_dat <- genData(10000, C7_dat)
 
+outliers(C7_dat$hrv)
+
 C7_dat$fitness <- rnorm_pre(C7_dat$hrv, 
                             mu = 22, sd = 1, r = 0.3, empirical = TRUE)
 
@@ -2550,6 +2601,8 @@ set.seed(1337)
 C8_dat <- ampute(C7_dat, prop = 0.05, bycases = FALSE)
 C8_dat <- C8_dat$amp
 
+outliers(C8_dat$hrv)
+
 C8_dat_sim <- syn(C8_dat, seed = 1337) # Creates synthetic data
 
 C8_com <- compare(
@@ -2619,6 +2672,8 @@ fig_c8
 set.seed(1337)
 C9_dat <- ampute(C7_dat, prop = 0.2, bycases = FALSE)
 C9_dat <- C9_dat$amp
+
+outliers(C9_dat$hrv)
 
 C9_dat_sim <- syn(C9_dat, seed = 1337) # Creates synthetic data
 

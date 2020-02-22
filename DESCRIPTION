@@ -16,6 +16,7 @@ Depends:
     tidyverse,
     cowplot,
     car,
+    StatMeasures,
     simstudy,
     mice
 Encoding: UTF-8
