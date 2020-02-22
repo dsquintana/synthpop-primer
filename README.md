@@ -14,7 +14,7 @@ To launch a RStudio server instance and run my analysis scripts online, click [h
 
 Once the Rstudio server instance has loaded, run the commands in the "R_script.R" file.
 
-Due to resource constraints of the RStudio server instance, the scripts that create Supplementary Figures 1-3 described in the [primer manuscript](https://psyarxiv.com/dmfb3/) could not be included. These scripts can be found on the paper's [Open Science Framework page](https://osf.io/z524n/)
+Due to resource constraints of the RStudio server instance, the scripts that create Supplementary Figures 1-3 described in the [primer manuscript](https://psyarxiv.com/dmfb3/) could not be included. These scripts can be found on the manuscript's [Open Science Framework page](https://osf.io/z524n/)
 
 #### Run this analysis locally
 To run the analysis locally in RStudio, download this repository as a zipped file. The R version and package versions are noted in the `sessionInfo.txt` file.
